@@ -156,7 +156,7 @@ class PathfindingApp:
                     if random.random() < density:
                         self.grid[r][c] = 1
         self.draw_grid()
-
+# Added heuristic function for pathfinding
     def heuristic(self,a,b):
         if self.heuristic_var.get()=="Manhattan":
             return abs(a[0]-b[0])+abs(a[1]-b[1])
@@ -251,4 +251,5 @@ class PathfindingApp:
 
 root = tk.Tk()
 app = PathfindingApp(root)
+
 root.mainloop()
